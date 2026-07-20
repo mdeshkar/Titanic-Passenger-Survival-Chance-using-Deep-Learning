@@ -35,7 +35,7 @@ data['Sex'] = label.transform(data['Sex'])
 
 embarked = onehot.transform(data[['Embarked']])
 
-embarked = pd.DataFrame(embarked, columns=onehot.get_feature_names_out())
+embarked = pd.DataFrame(embarked, columns=['Embarked_Chebourg', 'Embarked_Queenstown', 'Embarked_Southampton'])
 
 data = pd.concat([data.drop(columns = ['Embarked']), embarked], axis = 1)
 
